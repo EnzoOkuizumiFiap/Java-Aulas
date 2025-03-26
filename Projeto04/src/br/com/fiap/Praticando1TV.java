@@ -1,11 +1,9 @@
 package br.com.fiap;
 
-public class Radio {
-    // atributos
+public class Praticando1TV {
     public int volume;
-    public float estacao;
+    public int canal;
 
-    // métodos
     public void aumentarVolume() {
         volume++;
     }
@@ -14,7 +12,7 @@ public class Radio {
         volume--;
     }
 
-    public void trocarEstacao(float frequencia) {
-        estacao = frequencia;
+    public void trocarCanal(int novoCanal) {
+        canal = novoCanal;
     }
 }
