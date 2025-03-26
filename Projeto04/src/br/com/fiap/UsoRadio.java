@@ -8,7 +8,6 @@ public class UsoRadio {
         radio1.trocarEstacao(92.5f);
         radio1.aumentarVolume();
         radio1.aumentarVolume();
-        System.out.println("Volume atual: " + radio1.volume +
-                "\nEstação atual: " + radio1.estacao);
+        System.out.println("Volume atual: " + radio1.volume + "\nEstação atual: " + radio1.estacao);
     }
 }
