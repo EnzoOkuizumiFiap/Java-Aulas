@@ -1,6 +1,6 @@
 package br.com.fiap;
 
-public class Praticando1UsaTV {
+public class Praticando1UsoTV {
     public static void main(String[] args) {
         Praticando1TV TV = new Praticando1TV();
         TV.canal = 5;
