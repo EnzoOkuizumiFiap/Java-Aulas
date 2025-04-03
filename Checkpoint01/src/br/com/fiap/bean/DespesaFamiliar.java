@@ -3,6 +3,7 @@ package br.com.fiap.bean;
  * Nome: Enzo Okuizumi Miranda de Souza RM: 561432
  * Nome: Lucas Barros Gouveia RM: 566422
  * Nome: Milton Marcelino RM: 564836
+ * Teste 01
  */
 public class DespesaFamiliar {
     //Atributos
@@ -14,9 +15,9 @@ public class DespesaFamiliar {
     public double valorMensalidadeDaAcademia;
 
     //Métodos
-    public double calcularTotalDeDespesas() {
+    public double calcularTotalDeDespesas(){
         double gastos, gastoAcademia, gastoTotal;
-        gastos = gastoComLuz + gastoComAgua + gastoComInternet;
+        gastos = gastoComAgua + gastoComLuz + gastoComInternet;
         gastoAcademia = valorMensalidadeDaAcademia * numeroDeMoradores;
         gastoTotal = gastos + gastoAcademia;
         return gastoTotal;

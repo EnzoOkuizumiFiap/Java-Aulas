@@ -7,6 +7,7 @@ import java.util.Scanner;
  * Nome: Enzo Okuizumi Miranda de Souza RM: 561432
  * Nome: Lucas Barros Gouveia RM: 566422
  * Nome: Milton Marcelino RM: 564836
+ * Teste 01
  */
 public class Main {
     public static void main(String[] args) {
@@ -44,10 +45,10 @@ public class Main {
             despesas.gastoComInternet = gastoComInternet;
             despesas.valorMensalidadeDaAcademia = valorMensalidadeDaAcademia;
 
-            System.out.printf("Renda da Família: %.3f \nNúmero de Moradores: %d \nGasto com Luz: %.3f \nGasto com Água: %.3f \nGasto com Internet: %.3f \nGasto com Mensalidade Academia: %.3f \n\nRenda Família: %.3f \nDespesa da Família: %.3f \nRenda Líquida: %.3f", despesas.rendaFamiliar, despesas.numeroDeMoradores, despesas.gastoComLuz, despesas.gastoComAgua, despesas.gastoComInternet, despesas.valorMensalidadeDaAcademia, despesas.rendaFamiliar, despesas.calcularTotalDeDespesas(), despesas.calcularRendaFamiliarLiquida());
+            System.out.printf("--- Gastos Família ---\nNúmero de Moradores: %d \nGasto com Luz: %.3f \nGasto com Água: %.3f \nGasto com Internet: %.3f \nGasto com Mensalidade Academia: %.3f \n\nRenda Família: R$%.3f \nDespesa da Família: R$%.3f \nRenda Líquida: R$%.3f", despesas.numeroDeMoradores, despesas.gastoComLuz, despesas.gastoComAgua, despesas.gastoComInternet, despesas.valorMensalidadeDaAcademia, despesas.rendaFamiliar, despesas.calcularTotalDeDespesas(), despesas.calcularRendaFamiliarLiquida());
 
         } catch (Exception e) {
-            System.out.println("Erro!");
+            System.out.println("Erro! Valor inserido Inválido");
         }
     }
 }
