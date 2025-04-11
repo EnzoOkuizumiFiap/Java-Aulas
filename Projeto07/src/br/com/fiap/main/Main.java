@@ -33,12 +33,28 @@ public class Main {
             Thread.sleep(2000); // Atraso de 2 segundos (2000 milissegundos)
 
             //Menu exibindo o que o usuário deseja fazer
-            System.out.print("Digite outro canal:");
-            tv.setCanal(scan.nextInt());
+            System.out.print("\n\nO que deseja fazer: \n1-Definir outro canal \n2-Definir novo volume \n3-Aumentar volume \n4-Diminuir volume \n\nSelecione algumas das opções acima:");
+            int opcao = scan.nextInt();
 
-            System.out.print("Digite novo volume:");
-            tv.setVolume(scan.nextInt());
+            //Fazendo If/Else para definir novo canal ou novo volume
+            if (opcao == 1) {
+                System.out.print("Digite o Canal desejado: ");
+                int novoCanal = scan.nextInt();
+                tv.setCanal(novoCanal);
 
+            } else if (opcao == 2) {
+                System.out.print("Digite o Volume desejado: ");
+                int novoVolume = scan.nextInt();
+                tv.setVolume(novoVolume);
+
+            } else if (opcao == 3) {
+                tv.aumentarVolume();
+
+            } else if (opcao == 4) {
+                tv.diminuirVolume();
+            }
+
+            System.out.printf("Novo Canal: %d \nNovo Volume: %d", tv.getCanal(), tv.getVolume());
 
         } catch (Exception e) {
             System.out.println("Formato de número incorreto!");

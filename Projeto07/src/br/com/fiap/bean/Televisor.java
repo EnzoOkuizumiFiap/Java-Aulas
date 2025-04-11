@@ -36,4 +36,13 @@ public class Televisor {
             System.out.println(e.getMessage());
         }
     }
+
+    //Métodos específicos da classe
+
+    public void aumentarVolume() {
+        volume ++;
+    }
+    public void diminuirVolume() {
+        volume --;
+    }
 }
