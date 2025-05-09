@@ -17,6 +17,7 @@ public class MainPagamento {
                     case 1:
                         Funcionario func = new Funcionario();
                         func.setNome(JOptionPane.showInputDialog("Digite o nome do funcionário"));
+                        
                 }
             } catch (Exception e){
                 JOptionPane.showMessageDialog(null, e.getMessage());
