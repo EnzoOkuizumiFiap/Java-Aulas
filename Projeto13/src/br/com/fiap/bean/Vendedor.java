@@ -7,7 +7,8 @@ public class Vendedor extends Funcionario{
     //Construtores
     public Vendedor() {
     }
-    public Vendedor(float comissao) {
+    public Vendedor(String nome, float valorHoraTrabalhada, float comissao) {
+        super(nome, valorHoraTrabalhada);
         this.comissao = comissao;
     }
 
