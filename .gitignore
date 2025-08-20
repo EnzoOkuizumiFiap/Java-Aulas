@@ -1,0 +1,30 @@
+# Ignorar arquivos e pastas comuns do Java
+*.class
+*.jar
+*.war
+*.ear
+*.log
+*.tmp
+*.bak
+*.swp
+*.swo
+*.DS_Store
+*.iml
+*.ipr
+*.iws
+out/
+bin/
+target/
+build/
+.gradle/
+.idea/
+/.classpath
+/.project
+/.settings/
+/.vscode/
+# Ignorar arquivos gerados por IDEs
+*.launch
+*.metadata
+*.recommenders
+# Ignorar arquivos de sistema
+Thumbs.db
