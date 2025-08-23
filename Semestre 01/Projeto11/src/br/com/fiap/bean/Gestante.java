@@ -13,17 +13,23 @@ public class Gestante {
     public Gestante(){
     }
 
-    public Gestante(String nome, LocalDate dataDaGestacao) {
+    public Gestante(String nome, LocalDate dataDaGestacao) { //Os Construtores são para definir valores padrão  quando criamos um novo Objeto... Tipo, nome da gestante é cassandra, então quando criamos uma nova gestante automaticamente o seu nome é cassandra... Mas como usamos no main JOptionPane e inserimos os dados dela na execução, então temos que referenciar o objeto
         this.nome = nome;
         //this.dataDaGestacao = dataDaGestacao;
         setDataDaGestacao(dataDaGestacao);
     }
 
     //Métodos getters/setters
-    public String getNome() {
+
+    /* Métodos acessores: Getters -> pegar
+    *
+    * Métodos modificadores: Setters -> definir
+    * */
+
+    public String getNome() { //Chamando o metodo getNome para pegar o nome da pessoa
         return nome;
     }
-    public void setNome(String nome) {
+    public void setNome(String nome) { //Ele definiria o nome da pessoa no main e está setando o nome no main
         this.nome = nome;
     }
 
