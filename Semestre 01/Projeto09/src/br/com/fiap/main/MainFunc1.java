@@ -7,7 +7,7 @@ import java.time.LocalDate;
 public class MainFunc1 {
     //Exercício da Aula
     public static void main(String[] args) {
-        Funcionario funcionario1 = new Funcionario();
+        Funcionario funcionario1 = new Funcionario(); //Instanciando o Funcionario, isso quer dizer: Geramos o Funcionario1 a partir da classe/molde Funcionario
         funcionario1.setNome("Garibaldo CLT");
         funcionario1.setValorHoraTrabalho(5.50f); //Valor que recebe por hora trabalhada
         LocalDate dataAtual = LocalDate.now();
