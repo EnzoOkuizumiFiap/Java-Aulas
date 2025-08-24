@@ -9,6 +9,12 @@ public class Gestante {
     private String nome;
     private LocalDate dataDaGestacao;
 
+    /*
+    * MÉTODOS ESPECIAIS
+    *
+    * Getter, Setter e Constructor
+    * */
+
     //Construtores
     public Gestante(){
     }
