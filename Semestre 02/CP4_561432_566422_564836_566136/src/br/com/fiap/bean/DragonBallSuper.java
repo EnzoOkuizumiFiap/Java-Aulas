@@ -2,20 +2,21 @@ package br.com.fiap.bean;
 
 import java.io.*;
 
-/**
- * Classe que representa um personagem de Dragon Ball Super.
- * Contém atributos como nome, KI, técnicas, velocidade e transformações, além de métodos para ler e gravar os dados dos personagens em arquivo.
- * A classe implementa a Interface {@code IDBSuper}.
- *
- * @author Enzo, Milton e Lucas Barros
- * @version 1.0
- * */
-
 /*
  * Integrantes:
  * Enzo Okuizumi RM561432
  * Milton Jakson RM564836
  * Lucas Barros RM 566422
+ * Gustavo Bardy RM566136
+ * */
+
+/**
+ * Classe que representa um personagem de Dragon Ball Super.
+ * Contém atributos como nome, KI, técnicas, velocidade e transformações, além de métodos para ler e gravar os dados dos personagens em arquivo.
+ * A classe implementa a Interface {@code IDBSuper}.
+ *
+ * @author Enzo, Gustavo, Milton e Lucas Barros
+ * @version 1.0
  * */
 
 public class DragonBallSuper implements IDBSuper{

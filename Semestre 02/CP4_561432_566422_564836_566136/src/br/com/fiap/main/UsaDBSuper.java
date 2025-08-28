@@ -10,7 +10,15 @@ import java.io.IOException;
 * Enzo Okuizumi RM561432
 * Milton Jakson RM564836
 * Lucas Barros RM 566422
+* Gustavo Bardy RM566136
 * */
+
+/**
+ * Classe principal que executa o menu de cadastro e consulta de personagens Dragon Ball Super.
+ *
+ * @author Enzo Okuizumi, Gustavo, Milton Jakson, Lucas Barros
+ * @version 1.0
+ */
 
 public class UsaDBSuper {
     public static void main(String[] args) {

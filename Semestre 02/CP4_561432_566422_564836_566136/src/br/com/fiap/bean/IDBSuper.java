@@ -5,7 +5,7 @@ import java.io.IOException;
 /**
  * Interface que define as operações básicas para leitura e gravação de personagens Dragon Ball Super.
  *
- * @author Enzo, Milton e Lucas Barros
+ * @author Enzo, Gustavo, Milton e Lucas Barros
  * @version 1.0
  * */
 public interface IDBSuper {
