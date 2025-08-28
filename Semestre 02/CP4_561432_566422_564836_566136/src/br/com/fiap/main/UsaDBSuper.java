@@ -25,7 +25,7 @@ public class UsaDBSuper {
         DragonBallSuper dbs = new DragonBallSuper();
 
         do {
-            int input = Integer.parseInt(JOptionPane.showInputDialog(null, "=== Dragon Ball Super ===\n1 - Cadastrar personagem\n2 - Consultar Personagem\nEscolha um Opção:", "Menu Dragon Ball Super", JOptionPane.QUESTION_MESSAGE));
+            int input = Integer.parseInt(JOptionPane.showInputDialog(null, "=== Dragon Ball Super ===\n1 - Cadastrar personagem\n2 - Consultar Personagem\nEscolha uma Opção:", "Menu Dragon Ball Super", JOptionPane.QUESTION_MESSAGE));
 
             String path = JOptionPane.showInputDialog(null, "Digite o caminho da pasta:", "Caminho da pasta", JOptionPane.INFORMATION_MESSAGE);
 
