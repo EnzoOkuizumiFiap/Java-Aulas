@@ -50,11 +50,8 @@ public class UsaDBSuper {
 
                         dbs.ler(path);
 
-                        if (dbs == null) {
-                            JOptionPane.showMessageDialog(null, "Caminho e/ou código informado incorreto.");
-                        } else {
-                            JOptionPane.showMessageDialog(null, "Exibindo Dados:" + "\nCaminho: " + path + "\nArquivo: " + path + "/" + dbs.getNome_do_personagem() + ".txt" + "\nNome:" + dbs.getNome_do_personagem() + "\nKI: " + dbs.getKI() + "\nTécnicas: " + dbs.getTecnicas() + "\nVelocidade:" + dbs.getVelocidade() + "\nTransformações: " + dbs.getTransformacoes(), "Exibindo dados...", JOptionPane.INFORMATION_MESSAGE);
-                        }
+                        JOptionPane.showMessageDialog(null, "Exibindo Dados:" + "\nCaminho: " + path + "\nArquivo: " + path + "/" + dbs.getNome_do_personagem() + ".txt" + "\nNome:" + dbs.getNome_do_personagem() + "\nKI: " + dbs.getKI() + "\nTécnicas: " + dbs.getTecnicas() + "\nVelocidade:" + dbs.getVelocidade() + "\nTransformações: " + dbs.getTransformacoes(), "Exibindo dados...", JOptionPane.INFORMATION_MESSAGE);
+
 
                         break;
                     default:

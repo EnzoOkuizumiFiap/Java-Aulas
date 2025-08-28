@@ -70,11 +70,11 @@ public class DragonBallSuper implements IDBSuper{
      * Metodo ler() lê os dados de um personagem de Dragon Ball Super a partir de um arquivo de texto.
      * O arquivo deve estar localizado no caminho informado e possuir o seguinte formato:
      * <pre>
-     *     nome_do_personagem
+     *     Nome_do_personagem
      *     KI
-     *     tecnicas
-     *     velocidade
-     *     transformacoes
+     *     Tecnicas
+     *     Velocidade
+     *     Transformacoes
      * </pre>
      *
      * Exemplo de conteúdo do arquivo:
@@ -106,11 +106,11 @@ public class DragonBallSuper implements IDBSuper{
      * O nome do arquivo será composto pelo nome do personagem com extensão ".txt".
      * O conteúdo do arquivo seguirá o seguinte formato:
      * <pre>
-     *     nome_do_personagem
+     *     Nome_do_personagem
      *     KI
-     *     tecnicas
-     *     velocidade
-     *     transformacoes
+     *     Tecnicas
+     *     Velocidade
+     *     Transformacoes
      * </pre>
      *
      * Caso o diretório informado não exista, ele será criado automaticamente.
