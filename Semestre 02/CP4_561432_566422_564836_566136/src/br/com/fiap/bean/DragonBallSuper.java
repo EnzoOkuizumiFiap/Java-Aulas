@@ -26,7 +26,7 @@ public class DragonBallSuper implements IDBSuper{
     public DragonBallSuper() {
     }
 
-    public String getNome() {
+    public String getNome_do_personagem() {
         return nome_do_personagem;
     }
 
