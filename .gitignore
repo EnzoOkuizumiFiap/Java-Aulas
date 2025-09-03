@@ -1,6 +1,5 @@
 # Ignorar arquivos e pastas comuns do Java
 *.class
-*.jar
 *.war
 *.ear
 *.log
