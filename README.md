@@ -1,4 +1,4 @@
 # Java-Aulas
-Aulas de Java Fiap
+Aulas de Java
 
 Usando o draw.io para criar diagramas
