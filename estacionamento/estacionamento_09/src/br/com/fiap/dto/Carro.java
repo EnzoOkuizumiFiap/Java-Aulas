@@ -8,7 +8,8 @@ public class Carro {
     private String cor;
     private String descricao;
 
-    public Carro(){}
+    public Carro(){
+    }
 
     public String getPlaca() {
         return placa;
