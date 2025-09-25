@@ -1,4 +1,4 @@
-package src.br.com.fiap.controller;
+package br.com.fiap.controller;
 
 import br.com.fiap.model.dao.CarroDAO;
 import br.com.fiap.model.dao.ConnectionFactory;

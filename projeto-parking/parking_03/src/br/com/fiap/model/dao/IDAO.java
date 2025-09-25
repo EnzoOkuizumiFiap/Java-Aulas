@@ -1,4 +1,4 @@
-package src.br.com.fiap.model.dao;
+package br.com.fiap.model.dao;
 
 public interface IDAO {
     public String inserir(Object object);

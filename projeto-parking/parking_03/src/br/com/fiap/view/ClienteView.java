@@ -1,4 +1,4 @@
-package src.br.com.fiap.view;
+package br.com.fiap.view;
 
 import br.com.fiap.controller.ClienteController;
 

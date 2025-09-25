@@ -1,17 +1,18 @@
-package src.br.com.fiap.model.dao;
+package br.com.fiap.model.dao;
 
-import br.com.fiap.model.dto.Cliente;
+import br.com.fiap.model.dto.Carro;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-public class ClienteDAO implements IDAO {
+public class CarroDAO implements IDAO {
     private Connection con;
-    private Cliente cliente;
 
-    public ClienteDAO(Connection con) {
+    private Carro carro;
+
+    public CarroDAO(Connection con) {
         this.con = con;
     }
 
@@ -19,13 +20,13 @@ public class ClienteDAO implements IDAO {
         return con;
     }
 
-    public String inserir(Object object) {
-        cliente = (Cliente) object;
-        String sql = "insert into ddd_cliente(nome_cliente,placa) values(?,?)";
-
-        try (PreparedStatement ps = getCon().prepareStatement(sql)) {
-            ps.setString(1, cliente.getNomeCliente());
-            ps.setString(2, cliente.getPlaca());
+    public String inserir(Object object) { //Object, pois está assim no IDAO
+        carro = (Carro) object; //Conversão implicita, colocando (Carro)
+        String sql = "insert into ddd_carro(placa,cor,descricao) values(?,?,?)";
+        try (PreparedStatement ps = getCon().prepareStatement(sql);) {
+            ps.setString(1, carro.getPlaca());
+            ps.setString(2, carro.getCor());
+            ps.setString(3, carro.getDescricao());
             if (ps.executeUpdate() > 0) {
                 return "Inserido com sucesso.";
             } else {
@@ -37,13 +38,12 @@ public class ClienteDAO implements IDAO {
     }
 
     public String alterar(Object object) {
-        cliente = (Cliente) object;
-        String sql = "update ddd_cliente set nome_cliente=?,placa=? where id_cliente=?";
-
+        carro = (Carro) object;
+        String sql = "update ddd_carro set cor = ?,descricao = ? where placa = ?";
         try (PreparedStatement ps = getCon().prepareStatement(sql);) {
-            ps.setString(1, cliente.getNomeCliente());
-            ps.setString(2, cliente.getPlaca());
-            ps.setInt(3, cliente.getIdCliente());
+            ps.setString(1, carro.getCor());
+            ps.setString(2, carro.getDescricao());
+            ps.setString(3, carro.getPlaca());
             if (ps.executeUpdate() > 0) {
                 return "Alterado com sucesso.";
             } else {
@@ -55,11 +55,10 @@ public class ClienteDAO implements IDAO {
     }
 
     public String excluir(Object object) {
-        cliente = (Cliente) object;
-        String sql = "delete from ddd_cliente where id_cliente=?";
-
+        carro = (Carro) object;
+        String sql = "delete from ddd_carro where placa = ?";
         try (PreparedStatement ps = getCon().prepareStatement(sql);) {
-            ps.setInt(1, cliente.getIdCliente());
+            ps.setString(1, carro.getPlaca());
             if (ps.executeUpdate() > 0) {
                 return "Excluído com sucesso.";
             } else {
@@ -71,15 +70,14 @@ public class ClienteDAO implements IDAO {
     }
 
     public String listarUm(Object object) {
-        cliente = (Cliente) object;
-        String sql = "select * from ddd_cliente where id_cliente=?";
+        carro = (Carro) object; //<- Objeto da classe Carro / Conversão implicita, colocando (Carro)
+        String sql = "select * from ddd_carro where placa=?";
 
         try (PreparedStatement ps = getCon().prepareStatement(sql);) {
-            ps.setInt(1, cliente.getIdCliente());
+            ps.setString(1, carro.getPlaca());
             ResultSet rs = ps.executeQuery();
-
             if (rs.next()) {
-                return "Id: " + cliente.getIdCliente() + "\nNome: " + rs.getString("nome_cliente") + "\nPlaca: " + rs.getString("placa");
+                return String.format("Placa: %s \nCor: %s \nDescrição: %s", rs.getString("placa"), rs.getString("cor"), rs.getString("descricao"));
             } else {
                 return "Registro não encontrado!";
             }
@@ -87,4 +85,5 @@ public class ClienteDAO implements IDAO {
             return "Erro de SQL: " + e.getMessage();
         }
     }
+
 }

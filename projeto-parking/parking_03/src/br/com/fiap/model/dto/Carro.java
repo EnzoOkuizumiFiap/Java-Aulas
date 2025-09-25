@@ -1,4 +1,4 @@
-package src.br.com.fiap.model.dto;
+package br.com.fiap.model.dto;
 public class Carro {
     private String placa;
     private String cor;
