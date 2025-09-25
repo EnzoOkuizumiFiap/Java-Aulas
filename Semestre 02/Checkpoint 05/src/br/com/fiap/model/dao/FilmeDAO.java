@@ -33,6 +33,7 @@ public class FilmeDAO implements IDAO{
             } else {
                 return "Falha ao inserir";
             }
+
         } catch (SQLException e) {
             return "Erro de SQL: " + e.getMessage();
         } catch (Exception e) {
@@ -54,6 +55,7 @@ public class FilmeDAO implements IDAO{
             } else {
                 return "Falha ao alterar";
             }
+
         } catch (SQLException e) {
             return "Erro de SQL: " + e.getMessage();
         } catch (Exception e) {
@@ -72,6 +74,7 @@ public class FilmeDAO implements IDAO{
             } else {
                 return "Falha ao excluir";
             }
+
         } catch (SQLException e) {
             return "Erro de SQL: " + e.getMessage();
         } catch (Exception e) {
@@ -80,24 +83,21 @@ public class FilmeDAO implements IDAO{
     }
 
     public ArrayList<Filme> listarTodos() {
-        String sql = "SELECT * ddd_filme";
+        String sql = "select * from ddd_filme";
         ArrayList<Filme> listaFilme = new ArrayList<>();
 
-
-        try  (PreparedStatement ps = getCon().prepareStatement(sql); ResultSet rs = ps.executeQuery()){
-            if (rs != null) {
-                while (rs.next()) {
-                    Filme filme = new Filme();
-                    filme.setCodigo(rs.getInt(1));
-                    filme.setTitulo(rs.getString(2));
-                    filme.setGenero(rs.getString(3));
-                    filme.setProdutora(rs.getString(4));
-                    listaFilme.add(filme);
-                }
-                return listaFilme;
-            } else {
-                return null;
+        try (PreparedStatement ps = getCon().prepareStatement(sql); ResultSet rs = ps.executeQuery()){
+            while (rs.next()) {
+                Filme filme = new Filme();
+                filme.setCodigo(rs.getInt(1));
+                filme.setTitulo(rs.getString(2));
+                filme.setGenero(rs.getString(3));
+                filme.setProdutora(rs.getString(4));
+                listaFilme.add(filme);
             }
+
+            return listaFilme;
+
         } catch (SQLException e) {
             System.out.println("Erro de SQL: " + e.getMessage());
             return null;

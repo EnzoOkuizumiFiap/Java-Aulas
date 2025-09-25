@@ -4,8 +4,10 @@ import br.com.fiap.model.dao.ConnectionFactory;
 import br.com.fiap.model.dao.FilmeDAO;
 import br.com.fiap.model.dto.Filme;
 
+import javax.swing.*;
 import java.sql.Connection;
 import java.sql.SQLException;
+import java.sql.SQLOutput;
 import java.util.ArrayList;
 
 public class FilmeController {
@@ -53,16 +55,15 @@ public class FilmeController {
         return resultado;
     }
 
-    public ArrayList<Filme> listarTodosFilmes(int codigo) throws ClassNotFoundException, SQLException {
-        ArrayList<Filme> resultado = new ArrayList<>();
+    public ArrayList<Filme> listarTodosFilmes() throws ClassNotFoundException, SQLException {
         Connection con = ConnectionFactory.abrirConexao();
 
-        Filme filme = new Filme();
-        filme.setCodigo(codigo);
-        resultado.add(filme);
-
         FilmeDAO filmeDAO = new FilmeDAO(con);
-        resultado = filmeDAO.listarTodos();
+        ArrayList<Filme> resultado = filmeDAO.listarTodos();
+
+        for (Filme filmeLer : resultado) {
+            System.out.printf("\nCódigo: %s \nTítulo: %s \nGênero: %s \nProdutora: %s \n", filmeLer.getCodigo(), filmeLer.getTitulo(), filmeLer.getGenero(), filmeLer.getProdutora());
+        }
 
         ConnectionFactory.fecharConexao(con);
         return resultado;

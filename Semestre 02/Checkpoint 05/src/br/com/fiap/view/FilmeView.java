@@ -4,10 +4,12 @@ import br.com.fiap.controller.FilmeController;
 
 import javax.swing.*;
 
+import static java.lang.System.exit;
+
 public class FilmeView {
     public static void main(String[] args) {
         String titulo, genero, produtora;
-        String[] choice = {"Inserir", "Alterar", "Excluir", "Listar"};
+        String[] choice = {"Inserir", "Alterar", "Excluir", "Listar", "Fechar"};
         int option, codigo;
         FilmeController filmeCon = new FilmeController();
         do {
@@ -33,8 +35,10 @@ public class FilmeView {
                         System.out.println(filmeCon.excluirFilme(codigo));
                         break;
                     case 3:
-                        codigo = Integer.parseInt(JOptionPane.showInputDialog(null, "Digite o ID do filme", "ID", JOptionPane.INFORMATION_MESSAGE));
-                        System.out.println(filmeCon.listarTodosFilmes(codigo));
+                        System.out.println(filmeCon.listarTodosFilmes());
+                        break;
+                    case 4:
+                        exit(0);
                         break;
                     default:
                         JOptionPane.showMessageDialog(null, "Opção inválida", "Erro", JOptionPane.ERROR_MESSAGE);
