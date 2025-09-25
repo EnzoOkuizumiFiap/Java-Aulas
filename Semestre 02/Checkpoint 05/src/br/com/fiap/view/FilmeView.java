@@ -35,7 +35,7 @@ public class FilmeView {
                         System.out.println(filmeCon.excluirFilme(codigo));
                         break;
                     case 3:
-                        System.out.println(filmeCon.listarTodosFilmes());
+                        JOptionPane.showMessageDialog(null, filmeCon.listarTodosFilmes());
                         break;
                     case 4:
                         exit(0);
