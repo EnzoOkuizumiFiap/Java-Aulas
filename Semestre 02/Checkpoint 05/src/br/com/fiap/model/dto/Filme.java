@@ -4,7 +4,8 @@ package br.com.fiap.model.dto;
  * Integrantes:
  * Enzo Okuizumi RM561432
  * Milton Jakson RM564836
- * Lucas Barros RM 566422
+ * Lucas Barros RM566422
+ * Lucas Tavares RM563424
  * */
 
 public class Filme {
