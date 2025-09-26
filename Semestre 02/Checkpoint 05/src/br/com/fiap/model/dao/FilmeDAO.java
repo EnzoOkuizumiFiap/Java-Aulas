@@ -8,9 +8,8 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
-public class FilmeDAO implements IDAO{
+public class FilmeDAO{
     private Connection con;
-    private Filme filme;
 
     public FilmeDAO(Connection con) {
         this.con = con;
@@ -20,8 +19,7 @@ public class FilmeDAO implements IDAO{
         return con;
     }
 
-    public String inserir(Object object) {
-        filme = (Filme) object;
+    public String inserir(Filme filme) {
         String sql = "INSERT INTO ddd_filme(titulo, genero, produtora) VALUES (?,?,?)";
         try  (PreparedStatement ps = getCon().prepareStatement(sql)){
             ps.setString(1, filme.getTitulo());
@@ -41,8 +39,7 @@ public class FilmeDAO implements IDAO{
         }
     }
 
-    public String alterar(Object object) {
-        filme = (Filme) object;
+    public String alterar(Filme filme) {
         String sql = "UPDATE ddd_filme SET titulo=?, genero=?, produtora=? WHERE id_filme=?";
         try  (PreparedStatement ps = getCon().prepareStatement(sql)){
             ps.setString(1, filme.getTitulo());
@@ -63,8 +60,7 @@ public class FilmeDAO implements IDAO{
         }
     }
 
-    public String excluir(Object object) {
-        filme = (Filme) object;
+    public String excluir(Filme filme) {
         String sql = "DELETE FROM ddd_filme WHERE id_filme=?";
         try  (PreparedStatement ps = getCon().prepareStatement(sql)){
             ps.setInt(1, filme.getCodigo());
