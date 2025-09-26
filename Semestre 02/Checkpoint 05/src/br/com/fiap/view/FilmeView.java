@@ -10,27 +10,26 @@ import static java.lang.System.exit;
 
 public class FilmeView {
     public static void main(String[] args) {
-        String titulo, genero, produtora;
-        String[] choice = {"Inserir", "Alterar", "Excluir", "Listar", "Fechar"};
+        String titulo, genero, produtora, resposta;
         int option, codigo;
         FilmeController filmeCon = new FilmeController();
         Scanner scan = new Scanner(System.in);
         do {
             try {
-                option = JOptionPane.showOptionDialog(null, "Escolha uma das opções abaixo para manipular um Filme:\n", "Escolha", JOptionPane.DEFAULT_OPTION, JOptionPane.QUESTION_MESSAGE, null, choice, choice[0]);
-
+                System.out.println("Escolha uma das opções abaixo para manipular um Filme: \n1-Inserir \n2-Alterar \n3-Excluir \n4-Listar \n5-Fechar");
+                option = Integer.parseInt(scan.nextLine());
                 switch (option) {
-                    case 0:
-                        System.out.println("Digite o título do filme:");
+                    case 1:
+                        System.out.println("Digite o título do filme:\n");
                         titulo = scan.nextLine();
-                        System.out.println("Digite o genero do filme:");
+                        System.out.println("Digite o genero do filme:\n");
                         genero = scan.nextLine();
-                        System.out.println("Digite a produtora do filme:");
+                        System.out.println("Digite a produtora do filme:\n");
                         produtora = scan.nextLine();
                         System.out.println(filmeCon.inserirFilme(titulo, genero, produtora));
                         break;
-                    case 1:
-                        System.out.println("Digite o ID do filme:");
+                    case 2:
+                        System.out.println("Digite o código do filme:");
                         codigo = Integer.parseInt(scan.nextLine());
                         System.out.println("Digite o título do filme:");
                         titulo = scan.nextLine();
@@ -40,22 +39,28 @@ public class FilmeView {
                         produtora = scan.nextLine();
                         System.out.println(filmeCon.alterarFilme(codigo, titulo, genero, produtora));
                         break;
-                    case 2:
-                        System.out.println("Digite o ID do filme:");
+                    case 3:
+                        System.out.println("Digite o código do filme:");
                         codigo = Integer.parseInt(scan.nextLine());
                         System.out.println(filmeCon.excluirFilme(codigo));
                         break;
-                    case 3:
+                    case 4:
                         JOptionPane.showMessageDialog(null, filmeCon.listarTodosFilmes(), "Filmes", JOptionPane.INFORMATION_MESSAGE);
                         break;
                     default:
-                        JOptionPane.showMessageDialog(null, "Opção inválida", "Erro", JOptionPane.ERROR_MESSAGE);
+                        System.out.print("Opção Incorreta. Selecione outra, por favor!");
                         break;
                 }
             } catch (Exception e) {
-                JOptionPane.showMessageDialog(null, "Erro: " + e.getMessage(), "Erro", JOptionPane.ERROR_MESSAGE);
+                System.out.print("Erro:" + e.getMessage());
             }
-        } while (JOptionPane.showConfirmDialog(null, "Deseja continuar?", "Continuar", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE) == 0);
-        JOptionPane.showMessageDialog(null, "Fim do programa", "Fim", JOptionPane.INFORMATION_MESSAGE);
+
+            System.out.print("\nDeseja continuar? (s/n):\n");
+            resposta = scan.nextLine().trim().toLowerCase();
+
+        } while (resposta.equals("s"));
+
+        System.out.println("Fim do programa");
+        scan.close();
     }
 }

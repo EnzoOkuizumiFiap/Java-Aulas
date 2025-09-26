@@ -40,7 +40,7 @@ public class FilmeDAO{
     }
 
     public String alterar(Filme filme) {
-        String sql = "UPDATE ddd_filme SET titulo=?, genero=?, produtora=? WHERE id_filme=?";
+        String sql = "UPDATE ddd_filme SET titulo=?, genero=?, produtora=? WHERE codigo=?";
         try  (PreparedStatement ps = getCon().prepareStatement(sql)){
             ps.setString(1, filme.getTitulo());
             ps.setString(2, filme.getGenero());
@@ -61,7 +61,7 @@ public class FilmeDAO{
     }
 
     public String excluir(Filme filme) {
-        String sql = "DELETE FROM ddd_filme WHERE id_filme=?";
+        String sql = "DELETE FROM ddd_filme WHERE codigo=?";
         try  (PreparedStatement ps = getCon().prepareStatement(sql)){
             ps.setInt(1, filme.getCodigo());
 

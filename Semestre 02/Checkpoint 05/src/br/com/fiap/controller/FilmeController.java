@@ -62,8 +62,6 @@ public class FilmeController {
         String resultado = "";
 
         for (Filme filme : filmes) {
-            JOptionPane.showMessageDialog(null, "\nCódigo: " + filme.getCodigo() +"\nTítulo: " + filme.getTitulo() + "\nGênero: " + filme.getGenero() + "\nProdutora: " + filme.getProdutora(), "Filme", JOptionPane.INFORMATION_MESSAGE);
-
             // Acumula na string para retorno
             resultado += "Código: " + filme.getCodigo() + ", Título: " + filme.getTitulo() + ", Gênero: " + filme.getGenero() + ", Produtora: " + filme.getProdutora() + "\n";
         }
