@@ -5,6 +5,14 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
+/*
+ * Integrantes:
+ * Enzo Okuizumi RM561432
+ * Milton Jakson RM564836
+ * Lucas Barros RM 566422
+ * Gustavo Bardy RM566136
+ * */
+
 public class ConnectionFactory {
     public static Connection abrirConexao() {
         Connection con = null;
