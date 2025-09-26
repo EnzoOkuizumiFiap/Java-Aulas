@@ -9,6 +9,13 @@ import java.sql.Connection;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
+/*
+ * Integrantes:
+ * Enzo Okuizumi RM561432
+ * Milton Jakson RM564836
+ * Lucas Barros RM 566422
+ * */
+
 public class FilmeController {
     public String inserirFilme (String titulo, String genero, String produtora) throws ClassNotFoundException, SQLException {
         String resultado;

@@ -8,6 +8,13 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
+/*
+ * Integrantes:
+ * Enzo Okuizumi RM561432
+ * Milton Jakson RM564836
+ * Lucas Barros RM 566422
+ * */
+
 public class FilmeDAO{
     private Connection con;
 

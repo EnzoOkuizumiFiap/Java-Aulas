@@ -8,6 +8,13 @@ import java.util.Scanner;
 
 import static java.lang.System.exit;
 
+/*
+ * Integrantes:
+ * Enzo Okuizumi RM561432
+ * Milton Jakson RM564836
+ * Lucas Barros RM 566422
+ * */
+
 public class FilmeView {
     public static void main(String[] args) {
         String titulo, genero, produtora, resposta;

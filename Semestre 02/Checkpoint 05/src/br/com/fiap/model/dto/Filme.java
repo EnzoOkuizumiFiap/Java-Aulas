@@ -1,5 +1,12 @@
 package br.com.fiap.model.dto;
 
+/*
+ * Integrantes:
+ * Enzo Okuizumi RM561432
+ * Milton Jakson RM564836
+ * Lucas Barros RM 566422
+ * */
+
 public class Filme {
     //atributos
     private int codigo;
