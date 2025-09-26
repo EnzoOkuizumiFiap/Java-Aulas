@@ -6,8 +6,6 @@ import javax.swing.*;
 
 import java.util.Scanner;
 
-import static java.lang.System.exit;
-
 /*
  * Integrantes:
  * Enzo Okuizumi RM561432
@@ -20,7 +18,7 @@ public class FilmeView {
     public static void main(String[] args) {
         String titulo, genero, produtora, resposta;
         int option, codigo;
-        FilmeController filmeCon = new FilmeController();
+        FilmeController filmeController = new FilmeController();
         Scanner scan = new Scanner(System.in);
         do {
             try {
@@ -28,13 +26,13 @@ public class FilmeView {
                 option = Integer.parseInt(scan.nextLine());
                 switch (option) {
                     case 1:
-                        System.out.println("Digite o título do filme:\n");
+                        System.out.println("Digite o título do filme:");
                         titulo = scan.nextLine();
-                        System.out.println("Digite o genero do filme:\n");
+                        System.out.println("Digite o genero do filme:");
                         genero = scan.nextLine();
-                        System.out.println("Digite a produtora do filme:\n");
+                        System.out.println("Digite a produtora do filme:");
                         produtora = scan.nextLine();
-                        System.out.println(filmeCon.inserirFilme(titulo, genero, produtora));
+                        System.out.println(filmeController.inserirFilme(titulo, genero, produtora));
                         break;
                     case 2:
                         System.out.println("Digite o código do filme:");
@@ -45,15 +43,15 @@ public class FilmeView {
                         genero = scan.nextLine();
                         System.out.println("Digite a produtora do filme:");
                         produtora = scan.nextLine();
-                        System.out.println(filmeCon.alterarFilme(codigo, titulo, genero, produtora));
+                        System.out.println(filmeController.alterarFilme(codigo, titulo, genero, produtora));
                         break;
                     case 3:
                         System.out.println("Digite o código do filme:");
                         codigo = Integer.parseInt(scan.nextLine());
-                        System.out.println(filmeCon.excluirFilme(codigo));
+                        System.out.println(filmeController.excluirFilme(codigo));
                         break;
                     case 4:
-                        JOptionPane.showMessageDialog(null, filmeCon.listarTodosFilmes(), "Filmes", JOptionPane.INFORMATION_MESSAGE);
+                        JOptionPane.showMessageDialog(null, filmeController.listarTodosFilmes(), "Filmes", JOptionPane.INFORMATION_MESSAGE);
                         break;
                     default:
                         System.out.print("Opção Incorreta. Selecione outra, por favor!");
