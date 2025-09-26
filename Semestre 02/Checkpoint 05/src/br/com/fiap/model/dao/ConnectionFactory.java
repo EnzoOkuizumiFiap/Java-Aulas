@@ -10,7 +10,6 @@ import java.sql.SQLException;
  * Enzo Okuizumi RM561432
  * Milton Jakson RM564836
  * Lucas Barros RM 566422
- * Gustavo Bardy RM566136
  * */
 
 public class ConnectionFactory {
