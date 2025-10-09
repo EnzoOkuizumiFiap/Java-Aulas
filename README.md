@@ -4,16 +4,6 @@ Este repositório contém uma coleção abrangente de projetos e exercícios des
 
 ## 📚 Estrutura do Projeto
 
-### 🏢 Estacionamento (Domain Driven Design)
-Projetos focados em Domain Driven Design com integração a banco de dados Oracle:
-
-- **estacionamento_07** - Implementação inicial do sistema de estacionamento
-- **estacionamento_08** - Versão aprimorada com operações CRUD completas
-  - DTO (Data Transfer Object) para Carro
-  - DAO (Data Access Object) para persistência
-  - Conexão com banco Oracle via JDBC
-  - Operações: Create, Read, Update, Delete
-
 ### 📖 Semestre 01 - Fundamentos de Java
 
 #### Checkpoints
@@ -38,29 +28,47 @@ Projetos focados em Domain Driven Design com integração a banco de dados Oracl
 15. **Projeto15** - Aplicações Avançadas
 16. **Projeto16** - Projeto Final do Semestre
 
+---
+
 ### 📖 Semestre 02 - Tópicos Avançados
 
 #### Checkpoints
 - **Checkpoint 4** - Aplicações Avançadas
+- **Checkpoint 5** - Sistema de Filmes com JDBC
 
-#### Projetos Especializados
+#### Projetos Progressivos
 1. **Projeto 01** - Conceitos Avançados
 2. **Projeto 02** - Aplicações Práticas
 3. **Projeto 03** - Programação Orientada a Objetos
 4. **Projeto 04** - Estruturas de Dados
-5. **Projeto 05** - Tratamento de Exceções
-   - Exceções customizadas (SaldoInsuficienteException)
-   - ContaBancaria com validações
+5. **Projeto 05** - Tratamento de Exceções (<- SaldoInsuficienteException | ContaBancaria com validações)
 6. **Projeto 06** - Sistema de Cadastro com Persistência
 
-## 🛠️ Tecnologias Utilizadas
+#### Estacionamento - Focado em DDD (Domain Driven Design) com integração a banco de dados Oracle:
 
-- **Java** - Linguagem principal
-- **Oracle Database** - Banco de dados (JDBC)
-- **IntelliJ IDEA** - IDE de desenvolvimento
-- **Draw.io** - Criação de diagramas
-- **JOptionPane** - Interface gráfica simples
-- **Scanner** - Entrada de dados via console
+7. **estacionamento_07** - Implementação inicial do sistema de estacionamento.
+8. **estacionamento_08** - Versão aprimorada com operações CRUD completas (Com DTO, DAO e Conexão com BD).
+9. **estacionamento_09** - Refatoração e otimização do código, consolidando o padrão DAO.
+10. **estacionamento_10** - Adição da entidade `Cliente`, expandindo o sistema com um novo CRUD.
+11. **estacionamento_11** - Implementação de classes de teste para validar os CRUDs de `Carro` e `Cliente`.
+
+
+#### Parking (MVC e Swing) Sistema de gerenciamento de estacionamento.
+
+12. **parking_01**: Estruturação inicial do projeto no padrão MVC, com foco na entidade `Carro`.  
+13. **parking_02**: Expansão do sistema para incluir o MVC da entidade `Cliente` e uma tela principal de navegação.  
+14. **parking_03**: Implementação de uma interface gráfica (GUI) com Swing.
+15. **parking_04**: Praticando - Incluindo novo item de menu miCliente.
+
+#### Checkpoint 05
+16. **Checkpoint 5** - Sistema de Filmes com JDBC
+
+#### MegaFarma (API com Quarkus) API REST para um sistema de farmácia.
+
+17. **megafarma_01**: Criação da API REST com endpoints para o CRUD de `Remedio`, utilizando o padrão BO (Business Object) Sem integração com BD.  
+18. **megafarma_02**: Integração da API com banco de dados Oracle, adicionando persistência de dados ao sistema.
+
+---
 
 ## 🏗️ Conceitos Abordados
 
@@ -89,41 +97,6 @@ Projetos focados em Domain Driven Design com integração a banco de dados Oracl
 - DAO (Data Access Object)
 - Factory Pattern (ConnectionFactory)
 
-## 📁 Estrutura de Diretórios
-
-```
-Java-Aulas/
-├── estacionamento/           # Projetos DDD
-├── Semestre 01/             # Fundamentos Java
-│   ├── Checkpoint01/        # Exercícios de checkpoint
-│   ├── Projeto01/           # Projetos progressivos
-│   └── ...
-├── Semestre 02/             # Tópicos avançados
-│   ├── Checkpoint 4/        # Checkpoints avançados
-│   ├── Projeto 01/          # Projetos especializados
-│   └── ...
-├── Diagrama.drawio          # Diagramas do projeto
-└── README.md               # Este arquivo
-```
-
-## 🚀 Como Executar
-
-### Pré-requisitos
-- Java JDK 8 ou superior
-- Oracle Database (para projetos de estacionamento)
-- IntelliJ IDEA ou IDE compatível
-
-### Execução
-1. Clone o repositório
-2. Abra o projeto desejado no IntelliJ IDEA
-3. Configure as dependências (JDBC para Oracle)
-4. Execute a classe `Main` do projeto escolhido
-
-### Configuração do Banco (Estacionamento)
-1. Configure a conexão Oracle no `ConnectionFactory`
-2. Execute o script `ddd_carro.sql` para criar as tabelas
-3. Ajuste as credenciais de conexão conforme necessário
-
 ## 📊 Progressão de Aprendizado
 
 O projeto segue uma progressão didática:
@@ -143,13 +116,20 @@ O projeto segue uma progressão didática:
 - Criar interfaces gráficas simples
 - Gerenciar exceções e tratamento de erros
 
-## 📝 Notas Importantes
+## 🚀 Como Executar
 
-- Cada projeto é independente e pode ser executado separadamente
-- Os projetos de estacionamento requerem configuração de banco de dados
-- Alguns projetos utilizam arquivos de dados externos (Projeto 06)
-- Todos os códigos incluem comentários explicativos em português
+### Pré-requisitos
+- Java JDK 8 ou superior
+- Oracle Database (para projetos de estacionamento)
+- IntelliJ IDEA ou IDE compatível
 
----
+### Execução
+1. Clone o repositório
+2. Abra o projeto desejado no IntelliJ IDEA
+3. Configure as dependências (JDBC para Oracle)
+4. Execute a classe `Main` do projeto escolhido
 
-Usando o draw.io para criar diagramas
+### Configuração do Banco (Estacionamento)
+1. Configure a conexão Oracle no `ConnectionFactory`
+2. Execute o script `ddd_carro.sql` para criar as tabelas
+3. Ajuste as credenciais de conexão conforme necessário
